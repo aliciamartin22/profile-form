@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 
 <html>
-
-<!-- -Create a git repo for a "Profile" form
+<!--
+    -Create a git repo for a "Profile" form
     -Your form must conatin a first name, lastname, email (with verification) and a profile image upload.
     - Using the PRG pattern, submit that form to a processing page that redirects to a confirmation page.
     - You must prove (using FileZilla) that the profile image was uploaded
@@ -10,15 +10,24 @@
         -- created form
         -- created processing script with file upload code
         -- created redirect to confimation page
-    Advanced: use a feature branch and merge for each commit described above. At the very least, commit to a dev branch and merge back into master -->
+    Advanced: use a feature branch and merge for each commit described above. At the very least, commit to a dev branch and merge back into master 
+-->
+
     <head>
         <title>Profile Upload Form</title>
         <meta charset="utf-8" />
     </head>
     <body>
-        <form>
-
-
-        </form>
+        <form method='post' enctype='multipart/form-data' action='profile-processing.php'>     
+            First Name: <input type='text' name="fname" /><br>
+            Last Name: <input type='text' name="lname" /><br>
+            Email: <input type='email' name="contact" placeholder="john@johndoe.com" /><br>
+            Profile Image: <input type='file' name='userfile'><br>     
+            <input type='submit'> 
+        </form>      
     </body>
 </html>
+
+
+
+        
